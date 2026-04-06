@@ -1,0 +1,18 @@
+version: "1"
+name: n8n
+slug: n8n
+services:
+  - name: n8n
+    image: n8nio/n8n:latest
+    ports:
+      - "5678:5678"
+    expose:
+      port: 5678
+    environment:
+      NODE_ENV: production
+      N8N_PORT: "5678"
+      GENERIC_TIMEZONE: UTC
+    volumes:
+      - n8n_data:/home/node/.n8n
+volumes:
+  - name: n8n_data
