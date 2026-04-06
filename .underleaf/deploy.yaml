@@ -1,6 +1,8 @@
 version: "1"
 name: n8n
 slug: n8n
+targeting:
+  replicas: 1
 services:
   - name: n8n
     image: n8nio/n8n:latest
